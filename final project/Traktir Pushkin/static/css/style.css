@@ -1,0 +1,250 @@
+.up-arrow {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  right: 16px;
+  bottom: 24px;
+}
+.menu-bar {
+  position: fixed;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 27px;
+  margin: 0px;
+  top: 0px;
+  background: white;
+  box-shadow: 0px 0px 16px 0px #26262629;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 12.31px;
+}
+.uber-eats {
+  display: flex;
+  align-items: center;
+}
+.login-basket {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .nav-container{
+    max-width: 1000px;
+    margin: auto;
+  }
+  .upper-box {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .navigation nav{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .main-container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  .footer {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+@media screen and (max-width:1200px) {
+  .nav-container{
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: auto;
+  }
+  .main-container {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: auto;
+  }
+  .footer {
+    padding-left: 6px;
+    padding-right: 6px;
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+.upper-container {
+  margin-top: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 364px;
+  background: no-repeat url("../image/main-photo.png");
+  background-size: cover;
+  background-position: center;
+}
+.upper-box {
+  width: 100%;
+  display: flex;
+}
+.card-traktir {
+  width: 389px;
+  height: 204px;
+  box-shadow: 0px 0px 16px rgba(117, 117, 117, 0.2);
+  border-radius: 2px;
+  background: white;
+}
+#traktir {
+  padding-top: 38px;
+  padding-left: 38px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+}
+.info-traktir {
+  display: flex;
+  align-items: center;
+  padding-left: 38px;
+}
+#type-traktir {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #626262;
+}
+#time-traktir {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-left: 66px;
+  color: white;
+  background: #262626;
+  border-radius: 16px;
+}
+.navigation {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 29px;
+  border: 1px solid rgba(117, 117, 117, 0.2);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #626262;
+}
+h4 {
+  margin-top: 56px;
+  margin-bottom: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+}
+.dish {
+  height: 160px;
+  width: 470px;
+  border: 1px solid #75757533;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.dish-card :hover {
+  background: #EAEAEA;
+}
+.name-dish {
+  margin: 0px;
+  margin-top: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1D1D1D;
+}
+.ingr-dish {
+  margin: 0px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+}
+.img-dish {
+  height: 160px;
+  width: 170px;
+  border-radius: 0px;
+}
+.price {
+  margin-top: 83px;
+}
+.footer-container {
+  margin-top: 80px;
+  background-color: #262626;
+}
+#white-logo {
+  margin-top: 56px;
+  margin-bottom: 60px;
+  width: 190.77px;
+  height: 19.69px;
+}
+#language {
+  margin-top: 32px;
+  margin-bottom: 33px;
+  width: 227px;
+  height: 40px;
+  border-radius: 2px;
+}
+#social {
+  width: 92px;
+  height: 60px;
+}
+#column-2 {
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  max-width: 33%;
+}
+#column-3 {
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  max-width: 33%;
+}
+.app-download {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+#apple {
+  margin-right: 20px;
+  width: 120.66px;
+  height: 40px;
+}
+#google {
+  margin-left: 20px;
+  width: 135px;
+  height: 40px;
+}
+.documentation {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
