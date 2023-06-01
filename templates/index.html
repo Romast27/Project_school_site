@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_base.css') }}">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_index.css') }}">
+    <title>{{title}}</title>
+</head>
+<body>
+<header>
+    <div class="category-wrap">
+        <ul>
+            <li><a href="/" class="menu" id="menu_title">Гимназия</a></li>
+            <li><a href="/classes" class="menu">Классы</a></li>
+            <li><a href="/surveys" class="menu">Опросы</a></li>
+        </ul>
+    </div>
+    <div class="main_image">
+        <div class="welcome_box">
+            <h2 class="welcome">Добро пожаловать на сайт <br> МБОУ Гимназии города Фрязино</h2>
+        </div>
+    </div>
+    <nav class="navbar_navbar-light_bg-light">
+        {% if current_user.is_authenticated %}
+            <a class="navbar-brand" href="/logout">{{ current_user.name }}</a>
+        {% else %}
+            <p>
+              <a class="btn btn-primary" href="/register">Зарегистрироваться</a>
+              <a class="btn btn-success" href="/login">Войти</a>
+            </p>
+        {% endif %}
+    </nav>
+</header>
+<main role="main" class="main_container">
+  <div class="main_block">
+    <div class="map_box">
+        <div>
+          <img src="{{ url_for('static', filename='image/map_skl.png') }}">
+        </div>
+        <div class="map_content">
+          <p><br>&#9668;Здесь вы можете посмотреть как нас найти с помощью навигатора<br><br><br>А так выглядит наша школа со спутника&#9658;</p>
+        </div>
+        <div>
+          <img src="{{ url_for('static', filename='image/map_sat.png') }}">
+        </div>
+    </div>
+    <div class="news_title">
+      <p>Новости</p>
+    </div>
+    <div class="news_container">
+      <div class="block_news">
+        {% for item in news%}
+          <div class="news_block">
+            <h2>{{item.title}}</h2>
+            <div class="content_block">
+              <p>{{item.content}}</p>
+            </div>
+            <div>
+              <a class="show_content" href={{url_for('show_news', id=item.id)}}>Смотреть новость</a>
+            </div>
+            <div class="photo_block">
+              <img src="{{url_for('static', filename = item.photo ) }}" onerror="this.style.visibility = 'hidden'">
+            </div>
+            <div>
+              <p>Дата написания - {{item.created_date}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</main>
+</body>
+</html>

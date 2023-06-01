@@ -1,0 +1,44 @@
+.list_surveys {
+  margin-top: 50px;
+}
+.survey_container {
+  border: solid 0.5px #00d1ff;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  width: 49%;
+  display: inline-block;
+}
+.survey_container a {
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none !important;
+  margin-left: 10px;
+  margin-right: 180px;
+}
+.user_name p{
+  font-size: 20px;
+}
+.btn {
+  display: inline-block;
+  text-align: justify;
+  background: white;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 15px;
+  text-align: center;
+  border-radius: 5px;
+  color: #434343;
+  color: white;
+  background: #5ed223;
+  font-weight: bold;
+  line-height: 25px;
+  text-decoration: none;
+  max-width: 200px;
+}
+#survey_id {
+  font-weight: bold;
+  font-size: 18px;
+}

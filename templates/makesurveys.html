@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_surveys.css') }}">
+<h1>Создание опроса</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.title.label }}<br>
+        {{ form.title(class="form-control") }}<br>
+        {% for error in form.title.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.question.label }}<br>
+        {{ form.question(class="form-control") }}<br>
+        {% for error in form.question.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.content1.label }}<br>
+        {{ form.content1(class="form-control") }}<br>
+        {% for error in form.content1.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.content2.label }}<br>
+        {{ form.content2(class="form-control") }}<br>
+        {% for error in form.content2.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.content3.label }}<br>
+        {{ form.content3(class="form-control") }}<br>
+        {% for error in form.content3.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.content4.label }}<br>
+        {{ form.content4(class="form-control") }}<br>
+        {% for error in form.content4.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    {{message}}
+</form>
+<div>
+    <p>
+        <a class="btn" href="/surveys"> Завершить </a>
+    </p>
+</div>
+{% endblock %}
