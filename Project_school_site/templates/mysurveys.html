@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_surveys.css') }}">
+<h2>Список Ваших Опросов</h2>
+<div class="list_surveys">
+    {% for item in surveys%}
+        <div class="survey_container">
+            <div>
+                <p id="survey_id">Опрос №{{item.id_survey}}</p>
+            </div>
+            <div>
+                <p>{{item.question}}</p>
+            </div>
+            <div>
+                <ul>
+                    <li>{{item.answer1}} - {{item.num_answers1}} голосов</li>
+                    <li>{{item.answer2}} - {{item.num_answers2}} голосов</li>
+                    <li>{{item.answer3}} - {{item.num_answers3}} голосов</li>
+                    <li>{{item.answer4}} - {{item.num_answers4}} голосов</li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
